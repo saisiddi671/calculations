@@ -1,0 +1,81 @@
+h1 {
+  color: #00ff48;
+  text-align: center;
+  font-family: elephant;
+  font-size: 50px;
+  margin-top: 20px;
+}
+body {
+  background: linear-gradient(135deg, #112d55 0%, #3a6186 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  color: #d3c6aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@keyframes gradientMove {
+  0%, 100% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.box {
+  margin-top: 20px;
+  box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.37), 0 0 40px 10px rgba(0,255,255,0.08) inset;
+  padding: 20px;
+  margin-top: 25px;
+  margin-right: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  background: rgba(8, 26, 40, 0.6);
+  backdrop-filter: blur(12px) brightness(1.1);
+  border-radius: 20px;
+  animation: slideUp 1.5s cubic-bezier(.68,-0.55,.27,1.55);
+  position: relative;
+  overflow: hidden;
+}
+button {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #ff00fb 0%, #ffb347 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(255, 0, 251, 0.2), 0 0 8px #ff00fb, 0 0 16px #ffb347;
+  transition: box-shadow 0.3s, background 0.3s, transform 0.2s;
+  gap: 20px;
+}
+button:hover {
+  background: linear-gradient(90deg, #ffe678 0%, #ff00fb 100%);
+  color: #ff0055;
+  box-shadow: 0 0 24px 8px rgba(255, 230, 120, 0.6), 0 0 32px #ffe678, 0 0 16px #ff00fb;
+  transform: scale(1.12) rotate(-2deg);
+}
+input {
+  margin-left: 180px;
+  column-gap: 120px;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ff00fb;
+  background: rgba(255,255,255,0.1);
+  color: #afec07;
+  font-size: 18px;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(255,0,251,0.08);
+  transition: border 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+input:focus {
+  border: 2px solid #ffe678;
+  box-shadow: 0 0 16px rgba(255, 230, 120, 0.6), 0 0 24px #ffe678;
+}
